@@ -15,7 +15,7 @@ public class SchoolController {
     @Autowired
     private SchoolService schoolService;
 
-    @GetMapping("/")
+    @GetMapping("/query")
     public ResponseEntity<List<SchoolDto>> findAllStudents() {
         List<SchoolDto> listStudents = this.schoolService.getAll();
         return ResponseEntity.ok(listStudents);
